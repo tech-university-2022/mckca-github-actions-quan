@@ -1,0 +1,15 @@
+name: Hello World
+
+on: [push]
+
+jobs:
+  run-shell-command:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: echo a Hello world string
+        run: echo "Hello World"
+      - name: check node version
+        run: |
+            node -v
+            npm -v
+      - name: install node dependencies
