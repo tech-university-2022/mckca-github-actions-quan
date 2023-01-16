@@ -1,0 +1,15 @@
+name: Github Action Flow
+
+on: [push]
+
+jobs:
+  run-github-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Simple Javascript Action
+        uses: actions/hello-world-javascript-action@v1
+        with:
+          who-to-greet: Quan
+      - name: Log the time
+        run: echo ${{ steps.date.outputs.date }}
+          
